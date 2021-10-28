@@ -3,15 +3,16 @@ import { Link } from "react-router-dom";
 
 export const Navbar = () => {
 	return (
-		<nav className="navbar navbar-light bg-light mb-3">
+		<nav className="navbar navbar-light ">
 			<Link to="/">
 				<img
 					src="https://icon-library.com/images/star-wars-icon-png/star-wars-icon-png-8.jpg"
 					className="col-1"
 					alt="..."
+					style={{ display: "inline-block" }}
 				/>
 			</Link>
-			<div className="dropdown">
+			<div className="dropdown" style={{ display: "inline-block" }}>
 				<button
 					className="btn btn-primary dropdown-toggle"
 					type="button"
