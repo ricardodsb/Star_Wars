@@ -1,27 +1,47 @@
-import React from "react";
+import React, { useContext } from "react";
 import { Link } from "react-router-dom";
+import { Characters } from "../views/characters";
+import { Planets } from "../views/planets";
+import { Context } from "../store/appContext";
 
 export const Navbar = () => {
+	const { store, actions } = useContext(Context);
+
 	return (
-		<nav className="navbar row d-flex justify-content-center col-12 bg-light">
-			<div className="col-4">
+		<nav className="navbar row d-flex col-13 bg-dark">
+			<div className="navbar-brand col-4">
 				<Link to="/">
 					<img
-						src="https://icon-library.com/images/star-wars-icon-png/star-wars-icon-png-8.jpg"
+						src="https://logodownload.org/wp-content/uploads/2015/12/star-wars-logo-3-1.png"
 						className="d-grid gap-2 d-md-flex justify-content-md-start"
 						alt="..."
-						style={{ width: "55px", marginLeft: "30px" }}
+						style={{ width: "73px", marginLeft: "30px" }}
 					/>
 				</Link>
 			</div>
-			<div className="dropdown col-4 d-grid gap-2 d-md-flex justify-content-md-end">
+			<div className="" style={{ width: "5px" }}>
+				<Link className="nav-link" to="/planets">
+					Planets
+				</Link>
+			</div>
+			<div className="" style={{ width: "10px" }}>
+				<Link className="nav-link" to="/characters">
+					Characters
+				</Link>
+			</div>
+			<div
+				className="dropdown col-4 d-grid gap-2 d-md-flex justify-content-md-end"
+				style={{ marginRight: "30px" }}>
 				<button
 					className="btn btn-primary dropdown-toggle justify-content-md-end"
 					type="button"
 					id="dropdownMenuButton1"
 					data-bs-toggle="dropdown"
-					aria-expanded="false">
-					Favorites
+					aria-expanded="false"
+					title={`Favorites ${store.favorites.length}`}>
+					{store.favorites.map((item, index) => {
+						return <li key={index}>{item}</li>;
+					})}
 				</button>
 				<ul className="dropdown-menu" aria-labelledby="dropdownMenuButton1">
 					<li>

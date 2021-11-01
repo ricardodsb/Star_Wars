@@ -1,20 +1,11 @@
-import React from "react";
+import React, { useContext, useEffect } from "react";
 import "../../styles/home.scss";
+import { Cards } from "../component/cards";
+import { Planets } from "../views/planets";
 
-export const Home = () => {
-	return (
-		<div className="row">
-			<h3>Characters </h3>
-			<div className="card col-3">
-				<img className="card-img-top" alt="Card image cap" />
-				<div className="card-body">
-					<h5 className="card-title"> Luke Skywalker </h5>
-					<p className="card-text" />
-					<a href="#" className="btn btn-primary">
-						Go somewhere
-					</a>
-				</div>
-			</div>
-		</div>
-	);
-};
+export const Home = () => (
+	<div className="page-container">
+		<Cards />
+		<Planets />
+	</div>
+);

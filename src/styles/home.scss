@@ -1,3 +1,40 @@
-h3 {
+body {
+    font-family: cursive;
+}
+h1 {
     color: rgb(231, 67, 95);
+}
+.title{
+    text-align: left;
+}
+
+.cards-wrapper {
+    display: flex;
+    padding-bottom: 1.5rem;
+    overflow-x: scroll;
+    overflow-y: hidden;
+    margin: 10px;
+    justify-content: center;
+    padding: 10px;
+}
+
+.page-container {
+    align-items: center;
+    background-image: url(https://media.istockphoto.com/photos/space-background-wiht-stars-stock-image-picture-id1287901429?b=1&k=20&m=1287901429&s=170667a&w=0&h=RH6-KPEq-WYftCxoKnQixr8SOwyHlWr8F8EfloDmTxg=);
+    min-height: 100vh;
+  }
+
+.card {
+    padding: 10px;
+    margin: 10px;
+    justify-content: center;
+}
+.footer {
+    color: rgb(76, 76, 221);
+    height: 200%;
+    
+}
+
+.card-body {
+    color: white;
 }

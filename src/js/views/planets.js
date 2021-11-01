@@ -1,18 +1,18 @@
 import React, { useEffect, useContext } from "react";
 import { Context } from "../store/appContext";
 
-export const Cards = () => {
+export const Planets = () => {
 	const { store, actions } = useContext(Context);
 	useEffect(() => {
-		actions.fetchPeople();
+		actions.fetchPlanets();
 	}, []);
 	return (
-		<div className="container-fluid content-row" style={{ paddingTop: "10px" }}>
+		<div className="container-fluid content-row">
 			<div className="title">
-				<h1>Characters</h1>
+				<h1>Planets</h1>
 			</div>
 			<div className="cards-wrapper">
-				{store.peopleList.map((item, index) => {
+				{store.planetsList.map((item, index) => {
 					return (
 						<div className="row col-auto" style={{ margin: "10px", width: "15 rem" }} key={index}>
 							<div className="card bg-dark">
