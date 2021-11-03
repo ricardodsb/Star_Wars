@@ -7,7 +7,7 @@ export const Cards = () => {
 		actions.fetchPeople();
 	}, []);
 	return (
-		<div className="container-fluid content-row" style={{ paddingTop: "10px" }}>
+		<div className="container-fluid content-row">
 			<div className="title">
 				<h1>Characters</h1>
 			</div>
@@ -16,10 +16,14 @@ export const Cards = () => {
 					return (
 						<div className="row col-auto" style={{ margin: "10px", width: "15 rem" }} key={index}>
 							<div className="card bg-dark">
-								<img src="..." className="card-img-top" alt="..." />
+								<img
+									src="https://i0.wp.com/hipertextual.com/wp-content/uploads/2020/01/hipertextual-star-wars-deseo-mas-grande-darth-vader-podria-hacerse-realidad-muy-pronto-2020659163.jpg?fit=2048%2C1365&ssl=1"
+									className="characters card-img-top mx-auto"
+									alt="..."
+								/>
 								<div className="card-body">
-									<h5 className="card-title">{item.name}</h5>
-									<p className="card-text">May the force be with you </p>
+									<h5 className="card-title text-warning">{item.name}</h5>
+									<p className="card-text"> Click below to see the character info</p>
 									<a href="#" className="btn btn-primary float-start">
 										Learn more
 									</a>

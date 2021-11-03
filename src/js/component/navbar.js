@@ -19,16 +19,7 @@ export const Navbar = () => {
 					/>
 				</Link>
 			</div>
-			<div className="" style={{ width: "5px" }}>
-				<Link className="nav-link" to="/planets">
-					Planets
-				</Link>
-			</div>
-			<div className="" style={{ width: "10px" }}>
-				<Link className="nav-link" to="/characters">
-					Characters
-				</Link>
-			</div>
+
 			<div
 				className="dropdown col-4 d-grid gap-2 d-md-flex justify-content-md-end"
 				style={{ marginRight: "30px" }}>

@@ -3,7 +3,8 @@ const getState = ({ getStore, getActions, setStore }) => {
 		store: {
 			favorites: [],
 			peopleList: [],
-			planetsList: []
+			planetsList: [],
+			vehiclesList: []
 		},
 		actions: {
 			fetchPeople: async () => {
@@ -30,6 +31,19 @@ const getState = ({ getStore, getActions, setStore }) => {
 				const json = await response.json();
 				setStore({ planetsList: json.results });
 			},
+			fetchVehicles: async () => {
+				const URL = "https://www.swapi.tech/api/vehicles";
+				const CONFIG = {
+					method: "GET",
+					headers: {
+						"Content-type": "application/json"
+					}
+				};
+				const response = await fetch(URL, CONFIG);
+				const json = await response.json();
+				setStore({ vehiclesList: json.results });
+			},
+
 			setFavorites: name => {
 				const store = getStore();
 				setStore({ favorites: [...store.favorites, name] });
