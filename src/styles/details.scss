@@ -1,0 +1,26 @@
+.details-img {
+    object-fit: cover;
+    object-position: top;
+    height: 100%;
+    width: 100%;
+}
+body {
+    font-family: cursive;
+    background-image: url(https://img.purch.com/rc/1680x1050/aHR0cDovL3d3dy5zcGFjZS5jb20vaW1hZ2VzL2kvMDAwLzA0My8zMjgvb3JpZ2luYWwvYXJvdW5kLWEtc3Rhci1zeXN0ZW0tMTkyMC5qcGc=);
+    color: white;
+    min-height: 100vh;
+}
+h1 {
+    padding-top: 10px;
+    margin-left: 10%;
+    color: rgb(231, 67, 95);
+}
+
+.details-content {
+    padding-top: 15%;
+    padding-bottom: 30 px;
+}
+
+.new {
+    min-height: 100vh;
+}

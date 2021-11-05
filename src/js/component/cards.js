@@ -1,5 +1,6 @@
 import React, { useEffect, useContext } from "react";
 import { Context } from "../store/appContext";
+import { Link } from "react-router-dom";
 
 export const Cards = () => {
 	const { store, actions } = useContext(Context);
@@ -12,7 +13,7 @@ export const Cards = () => {
 				<h1>Characters</h1>
 			</div>
 			<div className="cards-wrapper">
-				{store.peopleList.map((item, index) => {
+				{store.peopleList.map((people, index) => {
 					return (
 						<div className="row col-auto" style={{ margin: "10px", width: "15 rem" }} key={index}>
 							<div className="card bg-dark">
@@ -22,12 +23,14 @@ export const Cards = () => {
 									alt="..."
 								/>
 								<div className="card-body">
-									<h5 className="card-title text-warning">{item.name}</h5>
+									<h5 className="card-title text-warning">{people.name}</h5>
 									<p className="card-text"> Click below to see the character info</p>
 									<a href="#" className="btn btn-primary float-start">
-										Learn more
+										<Link to={"/info/" + index + 1}>
+											<span className="text-warning ">Learn More</span>
+										</Link>
 									</a>
-									{store.favorites.includes(item.name) ? null : (
+									{store.favorites.includes(people.name) ? null : (
 										<button
 											className="btn btn-outline-warning float-end"
 											onClick={() => actions.setFavorites(item.name)}>
