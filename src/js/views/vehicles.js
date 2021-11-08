@@ -1,5 +1,6 @@
 import React, { useEffect, useContext } from "react";
 import { Context } from "../store/appContext";
+import { Link } from "react-router-dom";
 
 export const Vehicles = () => {
 	const { store, actions } = useContext(Context);
@@ -11,7 +12,7 @@ export const Vehicles = () => {
 			<div className="title">
 				<h1>Vehicles</h1>
 			</div>
-			<div className="cards-wrapper">
+			<div className="cards-content">
 				{store.vehiclesList.map((item, index) => {
 					return (
 						<div className="row col-auto" style={{ margin: "10px", width: "15 rem" }} key={index}>
@@ -25,7 +26,9 @@ export const Vehicles = () => {
 									<h5 className="card-title">{item.name}</h5>
 									<p className="card-text"> Click below to see the vehicle info </p>
 									<a href="#" className="btn btn-primary float-start">
-										Learn more
+										<Link to={"/infovehicles/" + index + 1}>
+											<span className="text-warning ">Learn More</span>
+										</Link>
 									</a>
 									{store.favorites.includes(item.name) ? null : (
 										<button

@@ -47,6 +47,19 @@ const getState = ({ getStore, getActions, setStore }) => {
 			setFavorites: name => {
 				const store = getStore();
 				setStore({ favorites: [...store.favorites, name] });
+			},
+
+			removeFav: (category, uid) => {
+				// si el usuario añade elementos, los incluimos en la lista global
+				const store = getStore();
+				let position;
+				store.favorites.forEach((element, index) => {
+					if (element.category === category && element.id === uid) {
+						position = index;
+					}
+				});
+				store.favorites.splice(position, 1);
+				setStore({ favorites: [...store.favorites] });
 			}
 		}
 	};
