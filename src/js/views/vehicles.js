@@ -26,7 +26,7 @@ export const Vehicles = () => {
 									<h5 className="card-title">{item.name}</h5>
 									<p className="card-text"> Click below to see the vehicle info </p>
 									<a href="#" className="btn btn-primary float-start">
-										<Link to={"/infovehicles/" + index + 1}>
+										<Link to={"/infovehicles/vehicles/" + item.uid}>
 											<span className="text-warning ">Learn More</span>
 										</Link>
 									</a>

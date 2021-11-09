@@ -26,7 +26,7 @@ export const Cards = () => {
 									<h5 className="card-title text-warning">{item.name}</h5>
 									<p className="card-text"> Click below to see the character info</p>
 									<a href="#" className="btn btn-primary float-start">
-										<Link to={"/info/" + index + 1}>
+										<Link to={"/info/people/" + item.uid}>
 											<span className="text-warning ">Learn More</span>
 										</Link>
 									</a>

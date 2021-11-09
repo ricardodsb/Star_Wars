@@ -26,7 +26,7 @@ export const Planets = () => {
 									<h5 className="card-title text-warning">{item.name}</h5>
 									<p className="card-text"> Click below to see the planet info </p>
 									<a href="#" className="btn btn-primary float-start">
-										<Link to={"/infoplanets/" + index + 1}>
+										<Link to={"/infoplanets/planets/" + item.uid}>
 											<span className="text-warning ">Learn More</span>
 										</Link>
 									</a>

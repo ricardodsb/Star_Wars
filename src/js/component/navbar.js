@@ -24,7 +24,9 @@ export const Navbar = () => {
 				</Link>
 			</div>
 
-			<div className="dropdown col-4 d-grid gap-2 d-md-flex justify-content-md-end">
+			<div
+				className="dropdown col-4 d-grid gap-2 d-md-flex justify-content-md-end"
+				style={{ marginRight: "80px" }}>
 				<div className="dropdown">
 					<a className="nav-link dropdown-toggle" onClick={clickMenu}>
 						{`Favorites ${store.favorites.length}`}
